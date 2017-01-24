@@ -6,7 +6,7 @@ more comments
 class board:
     def __init__(self):
         self.cell = []
-        for i in range(43):
+        for i in range(42):
             self.cell.append(0)
     
     def drop(self, column, player):
@@ -17,8 +17,9 @@ class board:
         return 1
     
     def display(self):
-        for i in range(8):
+        for i in range(6):
+            printarray = []
             for j in range(7):
-                print(self.cell[i+(6-j)*6])
-            print("\n")
+                printarray.append(self.cell[(5-i)*7+j])
+            print(printarray)
         return 0
